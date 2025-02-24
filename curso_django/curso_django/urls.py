@@ -7,6 +7,6 @@ from.import views
 urlpatterns =  [
     path('admin/', admin.site.urls),
     path('saludo/', views.saludo, name='saludo'),
-    path('despedida/', views.despedida, name='despedida'),  # Aquí falta una coma
-    path('adulto/<int:edad>/', views.adulto, name='adulto')
+    path('despedida/', views.despedida, name='despedida'),  # aqui se le asigna un nombre a la vista despedida
+    path('adulto/<int:edad>/', views.adulto, name='adulto') # aqui lo que se hace es pasar un parametro a la vista adult que es la edad de la persona 
 ]

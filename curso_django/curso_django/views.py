@@ -12,4 +12,4 @@ def adulto(request, edad):
     if edad >= 18:
         return HttpResponse("eres mayor de edad")
     else:
-        return HttpResponse("eres menor de edad")
+        return HttpResponse("eres menor de edad") 
