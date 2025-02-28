@@ -6,8 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hola {{name}}</h1>
+    <h1>Hola {{ name }}</h1>  <!-- Muestra el nombre recibido desde la URL -->
     <h3>Categorias</h3>
-    <p>{{categories}}</p>
+    <p>{{ categories }}</p>  <!-- Muestra la lista de categorías en formato de texto -->
+    <ul>
+        {% for category in categories %}  <!-- Itera sobre la lista de categorías -->
+            {% if category == 'code' %}  <!-- Si la categoría es "code", la muestra en negrita -->
+                <li><b>{{ category }}</b></li>
+            {% else %}  <!-- Para las demás categorías, las muestra normalmente -->
+                <li>{{ category }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </body>
 </html>
