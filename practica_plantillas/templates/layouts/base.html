@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Página por defecto{% endblock %}</title> <!-- 1️⃣ Título de la página -->
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- 2️⃣ Estilos principales -->
+
+    {% block styles %} {% endblock %} <!-- 3️⃣ Estilos adicionales -->
+</head>
+<body>
+
+    <!-- 4️⃣ Encabezado con el menú de navegación -->
+    <header>
+        {% include 'layouts/partials/menu.html' %}
+    </header>
+
+    <!-- 5️⃣ Contenido principal -->
+    <main> 
+        {% block content %} {% endblock %}
+    </main>
+
+    <!-- 6️⃣ Pie de página -->
+    <footer>
+        {% include 'layouts/partials/footer.html' %}
+    </footer>
+
+    <!-- 7️⃣ Scripts de la página -->
+    {% block scripts %} {% endblock %}
+
+</body>
+</html>

@@ -9,3 +9,6 @@ def ejemplo(request):
 def otra(request):
     return render(request, 'otra.html', {})
 
+def index (request):
+    return render(request, 'index.html', {})
+

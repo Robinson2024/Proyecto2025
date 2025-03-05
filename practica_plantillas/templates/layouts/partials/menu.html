@@ -1,0 +1,10 @@
+{% load static %}
+<nav>
+    <img src="{% static 'img/logo.png' %}" alt="Logo de la empresa">
+    <img src="{% static 'img/logo_seremi.png' %}" alt="Logo Seremi">
+    <h1>Nombre de la empresa</h1>
+    <ul>
+        <li><a href="{% url 'index' %}">Inicio</a></li>
+        <li><a href="{% url 'portafolio' %}">Portafolio</a></li>
+    </ul>
+</nav>
